@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Weather Forecast Container with Full Width and Height -->
+    <div class="w-full h-full bg-cream rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center">
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold mb-4 text-center">Weather Forecast</h1>
+
+        <!-- City Search Input and Button -->
+        <div class="flex space-x-2 mb-4">
+            <input type="text" id="cityInput" placeholder="Enter city name"
+                class="flex-grow border border-gray-300 rounded p-2 outline-none">
+            <button id="searchBtn"
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Search</button>
+        </div>
+
+        <!-- Recently Searched Cities Dropdown -->
+        <div id="recentCities" class="mb-4 hidden">
+            <label class="font-medium block mb-1">Recently Searched:</label>
+            <select id="cityDropdown" class="w-full p-2 border rounded"></select>
+        </div>
+
+        <!-- Current Weather Data Display -->
+        <div id="weatherDisplay" class="text-center space-y-2 w-full"></div>
+
+        <!-- 5 Day Forecast Display (center-aligned) -->
+        <div id="NineDayForecast" class="w-full mt-6 flex justify-center space-x-4 overflow-x-auto">
+            <!-- Forecast items will go here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
